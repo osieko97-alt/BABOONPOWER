@@ -69,7 +69,16 @@ To use Git for version-controlled file transfers from your local machine to this
 
 This method allows for version control, history tracking, and easy synchronization of changes between your local machine and the remote workspace.
 
-**Git Flow Setup:** This repository has a basic Git Flow structure initialized with `main` and `develop` branches. For full Git Flow workflow (features, releases, hotfixes), install `git-flow` locally and run `git flow init` in your local clone. The `develop` branch is set as the development branch.
+### Pulling a Specific Folder from Local Machine
+
+If you have a specific folder like `C:\xampp\htdocs\liblary` on your Windows machine that you want to pull into the workspace:
+
+1. Download the `pull_library.ps1` script from this repository (or copy its contents).
+2. Edit the script: Update `$localRepoPath` to the path of your local clone of this repository.
+3. Run the PowerShell script on your local machine. It will copy the folder, commit, and push to the remote repo.
+4. The folder will then be available in the remote workspace under `liblary/`.
+
+**Note:** Ensure you have Git configured on your local machine and have cloned this repository.
 
 ### Notes & limitations
 
