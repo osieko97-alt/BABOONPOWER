@@ -1,0 +1,4 @@
+python-docx>=0.8.11
+python-pptx>=0.6.21
+PyPDF2>=3.0.0
+# Optional: if you need to convert legacy .doc files, consider installing `textract` or running LibreOffice headless externally.

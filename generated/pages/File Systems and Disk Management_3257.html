@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>File Systems and Disk Management</title><style>body{font-family:Segoe UI,Arial;margin:20px}h1{font-size:1.5rem}pre{background:#f5f5f5;padding:12px;overflow:auto}.meta{color:#999;font-size:0.9rem}.index{display:grid;gap:12px}.item{border:1px solid #ddd;padding:10px;border-radius:4px}</style></head><body>
+<h1>File Systems and Disk Management</h1>
+<div class="meta">Type: .PPTX | Size: 208943 bytes | Date: 2025-12-05</div>
+<p><a href="..\assets\3.-OS-AND-STORAGE-MANAGEMENT.pptx">📄 Original File</a></p>
+<pre>--- Slide 1 ---
+Storage Management
+Lecture 7
+
+--- Slide 2 ---
+Disk Storage Types
+Basic – uses static partitions (physical disk divisions) that can’t span physical drives. Use industry-standard partitioning and formatting and can contain up to 4 primary and 1 extended partitions, as well as logical drives
+Dynamic – uses volumes that can span physical drives. Supports advanced options, including fault-tolerance. Unlimited number of volumes. No other O/S can access dynamic storage; not supported on laptops.
+
+--- Slide 3 ---
+Upgrading Disk from Basic to Dynamic
+In cases where a volume crosses multiple disks, all related disks must be upgraded
+Any other O/S located on a partition will be rendered inoperable
+Removable media can’t be upgraded
+Can’t convert back from dynamic to basic
+
+--- Slide 4 ---
+Basic Disks
+Partitioning
+A process that blocks a group of tracks and sectors to be used by a particular file system, such as NTFS
+Formatting
+A process that creates a table containing file and folder information for a specific file system in a partition
+
+--- Slide 5 ---
+Basic Disks (continued)
+MBR and GPT support
+When a drive is partitioned, a Master Boot Record (MBR) and a partition table are created
+At the beginning track and sectors on the disk
+The MBR is located in the first sector and track of the hard disk
+Has startup information about partitions and how to access the disk
+The partition table contains information about each partition created
+
+--- Slide 6 ---
+Basic Disks (continued)
+Globally Unique Identifier (GUID) Partition Table or GPT
+A newer way to partition disks, without imposing the same type of limits on the number of partitions as with MBR
+GPT is one element of the Extensible Firmware Interface (EFI) approach
+Offered by the Unified EFI Forum
+GPT disks store partition information in each partition using main and backup tables
+
+--- Slide 7 ---
+Partition Management
+Primary -  from which you can boot an OS, such as MS-DOS or Win2K Server. Can only have 4 per disk.
+Extended – serves to overcome limit of 4 primary partition, is not bootable. Can only have 1 per disk.
+System – contains O/S boot files. Can only exists on a primary
+Boot – contains O/S system files. Can exist on a primary or extended.
+Partition needs to be formatted with a file system after it’s created, and it can then be assigned a drive letter.
+At least 1 partition needs to be marked active , that’s where your computer will look for the hardware-specific files to start the operating system
+
+
+--- Slide 8 ---
+Dynamic Disks
+A dynamic disk does not use traditional partitioning
+Makes it possible to set up a large number of volumes on one disk
+Provides the ability to extend volumes onto additional physical disks
+The number of disks that can be incorporated into one spanned volume is limited to 32
+Plan to convert basic disks to dynamic disks after you install Windows Server 2008
+
+
+--- Slide 9 ---
+Volume Management
+Dynamic disks support 5 volume types:- Simple- Spanned- Striped- Mirrored- Raid-5
+The volume containing boot files is called system volume, the volume containing system files (WINDOWS folder ) – boot volume
+
+--- Slide 10 ---
+RAID
+Redundant Array of Inexpensive (Independent) Disks
+A set of standards for lengthening disk life provide better performance and FT
+Software or Hardware RAID
+RAID levels – 0 through 6
+Server 2008 supports RAID levels 0, 1 and 5 through software 
+
+--- Slide 11 ---
+Software RAID vs. Hardware RAID
+Software RAID implements fault tolerance through the server’s operating system
+Hardware RAID is implemented through the server hardware
+Independent of the operating system
+Advantages over software RAID:
+Faster read and write response
+The ability to place boot and system files on different RAID levels
+The ability to ‘‘hot-swap’’ a failed disk
+More setup options to retrieve damaged data
+
+--- Slide 12 ---
+Simple Volume
+A portion of a disk or an entire disk that is setup  as a dynamic disk 
+Can be extended with an unallocated space
+Doesn’t provide FT
+
+--- Slide 13 ---
+Spanned Volume
+Method of combining free space on 2 to 32 physical disks into a single volume with available space on each of the spanned disks of varying size
+Storage is accomplished by filling the space on one disk and moving to each subsequent spanned disk
+Not FT
+Can be extended (only those formatted with NTFS)
+
+--- Slide 15 ---
+Striped Volume – RAID 0
+Similar to spanned in that both permit 2-32 disks combined. 
+Logically distributes the information simultaneously across all the disks, unlike spanned which sequentially store data.  This architecture provides faster I/O
+Not FT
+Free space areas on each disk need to be of equal size.
+
+--- Slide 16 ---
+RAID-5 Volume
+Similar to striped, but is fault-tolerant 
+Logically distributes the information simultaneously across all 3 or more disks, one of which stores parity
+If 1 disk fails, data can be reconstructed, but if more than 1 – it can’t.
+Writing is slower than striped, but reading is the same. When 1 disk fails performance degrades
+Calculate usable space: parity takes 1/n of the data, where n= number of disks in the volume. 
+Free space areas on each drive need to be of equal size.
+
+--- Slide 18 ---
+Mirrored Volume – RAID 1
+Creating a shadow copy of data on a backup disk 
+Requires 2 disks
+Most guaranteed FT, but less efficient use of disk space
+Read performance is the same as on any single disk drive, Write is slower than on single disk, but faster than RAID-5. No performance degradation when 1 disk fails.
+Disk Duplexing – 2 drives/2 controllers
+
+--- Slide 20 ---
+Shrinking a volume
+Windows Server 2008 comes with the ability to shrink a basic or dynamic disk volume
+Shrinking a volume enables you to create a new partition when one is needed and you don’t have extra disks
+When you shrink a volume, Windows Server 2008 starts from the end of that volume
+Works its way back through contiguous space to create unallocated disk space
+You can specify the amount of space to recover
+
+--- Slide 21 ---
+Mounting a Drive
+Windows Server 2008 enables you to mount a drive as an alternative to giving it a drive letter
+Mounted drive
+One that appears as a folder and is accessed through a path like any other folder
+You can mount a basic or dynamic disk drive, a CD/DVD drive, or a removable drive</pre>
+</body></html>

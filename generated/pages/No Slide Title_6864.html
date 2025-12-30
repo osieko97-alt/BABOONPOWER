@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>No Slide Title</title><style>body{font-family:Segoe UI,Arial;margin:20px}h1{font-size:1.5rem}pre{background:#f5f5f5;padding:12px;overflow:auto}.meta{color:#999;font-size:0.9rem}.index{display:grid;gap:12px}.item{border:1px solid #ddd;padding:10px;border-radius:4px}</style></head><body>
+<h1>No Slide Title</h1>
+<div class="meta">Type: .PPTX | Size: 283056 bytes | Date: 2025-12-05</div>
+<p><a href="..\assets\7.-DATA-PROCESSING.pptx">📄 Original File</a></p>
+<pre>--- Slide 1 ---
+CHAPTER 6ELECTRONIC DATA PROCESSING SYSTEMS
+
+--- Slide 2 ---
+Presentation Outline
+Paper-Based Input Systems
+Paperless Input Systems
+Paper-Based Processing Systems
+Paperless Processing Systems
+The Output System
+
+--- Slide 3 ---
+I. Paper-Based Input Systems
+        A.  Preparation and Completion of the 
+              Source Document.
+        B.  Transfer of Source Documents to 
+              Data Processing
+        C.  Data Entry
+        D.  Program Data Editing
+
+
+--- Slide 4 ---
+A.  Preparation and Completion of the Source Document
+Source documents such as sales orders are filled in manually.  Errors are minimized if source documents are well designed and easy to understand.
+
+--- Slide 5 ---
+B.  Transfer of Source Documents to Data Processing
+Input Document Control Form 
+       Provides batch control totals for batches of   
+       input data transmitted between user and data 
+       processing departments.  Monitors completeness of processing.  See Figure 6.1 on page 196.
+Data Transfer Log
+       Provides control over the disposition and use of transferred data.
+
+
+See Fig. 6-2 on p. 197
+
+--- Slide 6 ---
+C.  Data Entry
+Key verification takes place to ensure accurate data entry.  This involves typing in the data twice.  As the data is typed in a second time, key verification software verifies that the second keying matches the previous input already on the disk file.  A process of visual verification is less effective.
+
+--- Slide 7 ---
+D.  Program Data Editing
+Program data editing is a software technique used to screen data for errors prior to processing.  Examples include:
+Table Lookup – Entry must match values in a table.  (Example: valid customer number)
+Limit Test – Entry must not exceed an extreme value.  (Example: number of payroll hours)
+Continuous operations auditing – Unacceptable entries are separated and held in suspense until verified or corrected.
+Check digit – Redundant digit determined by a mathematical calculation.  (See illustration on p. 198)
+
+
+--- Slide 8 ---
+II. Paperless Input Systems
+Loss of Internal Controls
+Paperless Input Systems Requiring Human Intervention
+Paperless Input Systems Requiring No 
+Human Intervention
+
+
+--- Slide 9 ---
+A.  Loss of Internal Controls
+Transaction logs (registers) – Logs all inputs to a special file that automatically contains tags to identify transactions.
+Tagging – Provides an audit trail by including additional audit-type information with transaction data.  Audit-type information might include dates and user authorization codes.
+In on-line input systems, the need for keying in source documents may be eliminated.  The loss of paper-based internal controls can be compensated for by:
+
+--- Slide 10 ---
+B.  Paperless Input Systems Requiring Human Intervention
+On-line manual data-entry systems
+	Users manually type transactions into the computer system.
+Automatic Identification System
+	Merchandise and other items such as credit cards are tagged with machine-readable codes.
+
+--- Slide 11 ---
+EDI
+C.  Paperless Input Systems Requiring No Human Intervention
+In some systems, transactions are processed from beginning to end without any human intervention.
+An example would be a system that monitors inventory levels and places an order directly with a supplier’s system that automatically initiates shipment of the needed goods.
+
+--- Slide 12 ---
+III. Paper-Based Processing Systems
+
+	Virtually all paper-based systems for processing transactions are batch oriented.
+Batch Processing with Sequential File Updating
+Son-Father-Grandfather Master Files
+Batch Processing with Random-Access  File Updating
+
+
+--- Slide 13 ---
+A.  Batch Processing with Sequential File Updating
+Four steps include:
+Preparing the transaction file – Data is 
+      edited, validated, and sorted in the same sequence as the master file.
+Updating the master file (subsidiary records) – Transaction file records are matched with master file records, and a new master file is created with updated data.
+Updating the general ledger – Master file changes are updated in the general ledger.  Documented with journal vouchers.
+Preparing general ledger reports – Trial balances and other reports are produced.
+See Fig. 6-3 on p. 202
+
+--- Slide 14 ---
+B. Son-Father-Grandfather Master Files
+
+Master
+File
+File
+Update
+Father
+Grandfather
+Son
+
+Old
+Master
+File
+
+New
+Master
+File
+File
+Update
+
+New
+Master
+File
+Several generations of backup files may be kept.
+First Backup
+Second Backup
+
+--- Slide 15 ---
+C.  Batch-Processing with Random-Access File Updating
+Individual records are read one by one from the transaction file and used to update the related records in the master file.  It is not necessary to:
+Sort the transaction file in the same order as 
+      the master file.
+Generate a new master file.
+A backup of the master file should exist before the updating begins.
+
+--- Slide 16 ---
+IV. Paperless Processing Systems
+Characteristics of Paperless Processing Systems
+Batch Processing in Paperless Processing Systems
+Methods of Real-time Processing in Paperless Processing Systems
+Components of Real-Time Sales Systems
+
+--- Slide 17 ---
+A.  Characteristics of Paperless Processing Systems
+Two primary characteristics include:
+Either batch or real-time processing is possible.
+With most types of on-line real-time processing, individual transactions are processed as they are input into the system.  Under such a system master files are always up to date.
+
+--- Slide 18 ---
+B.  Batch Processing in Paperless Processing Systems
+Batch processing in paperless processing systems is similar to batch processing in paper-based systems except that:
+Journal vouchers are replaced by electronic 
+      equivalents.
+Periodic batch runs automatically update the general ledger.
+
+
+
+--- Slide 19 ---
+C.  Methods of On-Line, Real-time Processing in Paperless Processing Systems
+Inquiry/response systems – Users request information but do not input data for processing.
+Data entry systems – Users interactively input data that is processed periodically in batches.
+File processing systems – Users interactively input data that is immediately processed against relevant master files.
+Full or transaction processing systems – Similar to file processing systems except that the entire transaction is completed when input.  For example, an invoice is generated in addition to updating accounts receivable.
+
+--- Slide 20 ---
+D. Components of Real-Time Sales Systems
+Point-of-Sale (POS) System – to allow data collection at the point where the sale is completed, the traditional cash register is enhanced to allow it to function as the source data-entry device for sales transactions.
+Bar-Coding Technology – scanner technology and machine-readable bar codes such as UPC.
+EDI Ordering System – allows direct computer-to-computer exchange of business information and documents for placing orders and facilitating quick shipment.  
+
+--- Slide 21 ---
+V. The Output System
+
+        A.  The Purpose of Output Controls
+        B.  Examples of Output Controls
+The output system can be paper-based, paperless, or something in between.  Most paper-based batch-oriented systems with sequential file processing produce very large volumes of output.  In contrast, on-line, real-time paperless systems tend to produce very little output.
+
+--- Slide 22 ---
+A.  The Purpose of Output Controls
+Output controls are designed to ensure that processing results in valid output and that outputs are properly distributed.
+
+--- Slide 23 ---
+B.  Examples of Output Controls
+Control totals should be balanced to control     
+      totals generated independently of data processing.
+Internal audit often sets up an EDP control group that makes sure that errors are corrected, and that controls are instituted to avoid repeat situations.
+An output distribution register is maintained to control the distribution of reports.
+
+--- Slide 24 ---
+Summary
+Paper-based input systems maintain the traditional audit trail.
+Paperless input systems lose some internal controls that can be accomplished through transaction logs and tagging.
+Paper-based processing systems are usually batch oriented.
+Paperless processing systems may be batch or real time.
+Output systems should ensure valid output and proper distribution of information.
+</pre>
+</body></html>

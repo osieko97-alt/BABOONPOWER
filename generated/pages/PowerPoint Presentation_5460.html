@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>PowerPoint Presentation</title><style>body{font-family:Segoe UI,Arial;margin:20px}h1{font-size:1.5rem}pre{background:#f5f5f5;padding:12px;overflow:auto}.meta{color:#999;font-size:0.9rem}.index{display:grid;gap:12px}.item{border:1px solid #ddd;padding:10px;border-radius:4px}</style></head><body>
+<h1>PowerPoint Presentation</h1>
+<div class="meta">Type: .PPTX | Size: 1426048 bytes | Date: 2025-12-05</div>
+<p><a href="..\assets\8.-PROGRAMMING.pptx">📄 Original File</a></p>
+<pre>--- Slide 1 ---
+9.1
+9
+Programming
+Languages
+Foundations of Computer Science ã Cengage Learning
+
+--- Slide 2 ---
+9.2
+ Describe the evolution of programming languages from machine     language to high-level languages.
+ Understand how a program in a high-level language is translated     into machine language.
+ Distinguish between four computer language paradigms.
+ Understand the procedural paradigm and the interaction     between a program unit and data items in the paradigm.
+ Understand the object-oriented paradigm and the interaction     between a program unit and objects in this paradigm.
+ Define functional paradigm and understand its applications.
+ Define a declaration paradigm and understand its applications.
+ Define common concepts in procedural and object-oriented     languages.
+Objectives
+After studying this chapter, the student should be able to:
+
+--- Slide 3 ---
+9.3
+9-1   EVOLUTION
+To write a program for a computer, we must use a computer language. A computer language is a set of predefined words that are combined into a program according to predefined rules (syntax). Over the years, computer languages have evolved from machine language to high-level languages.
+
+--- Slide 4 ---
+9.4
+Machine languages
+In the earliest days of computers, the only programming languages available were machine languages. Each computer had its own machine language, which was made of streams of 0s and 1s. In Chapter 5 we showed that in a primitive hypothetical computer, we need to use eleven lines of code to read two integers, add them and print the result. These lines of code, when written in machine language, make eleven lines of binary code, each of 16 bits, as shown in Table 9.1.
+The only language understood by a computer is machine language.
+
+--- Slide 5 ---
+9.5
+
+--- Slide 6 ---
+9.6
+Assembly languages
+The next evolution in programming came with the idea of replacing binary code for instruction and addresses with symbols or mnemonics. Because they used symbols, these languages were first known as symbolic languages. The set of these mnemonic languages were later referred to as assembly languages. The assembly language for our hypothetical computer to replace the machine language in Table 9.2 is shown in Program 9.1.
+The only language understood by a computer is machine language.
+
+--- Slide 7 ---
+9.7
+
+--- Slide 8 ---
+9.8
+High-level languages
+Although assembly languages greatly improved programming efficiency, they still required programmers to concentrate on the hardware they were using. Working with symbolic languages was also very tedious, because each machine instruction had to be individually coded. The desire to improve programmer efficiency and to change the focus from the computer to the problem being solved led to the development of high-level languages.
+
+	Over the years, various languages, most notably BASIC, COBOL, Pascal, Ada, C, C++ and Java, were developed. Program 9.1 shows the code for adding two integers as it would appear in the C++ language. 
+
+--- Slide 9 ---
+9.9
+
+--- Slide 10 ---
+9.10
+9-2   TRANSLATION
+Programs today are normally written in one of the high-level languages. To run the program on a computer, the program needs to be translated into the machine language of the computer on which it will run. The program in a high-level language is called the source program. The translated program in machine language is called the object program. Two methods are used for translation: compilation and interpretation.
+
+--- Slide 11 ---
+9.11
+Compilation
+A compiler normally translates the whole source program into the object program.
+Interpretation
+Some computer languages use an interpreter to translate the source program into the object program. Interpretation refers to the process of translating each line of the source program into the corresponding line of the object program and executing the line. However, we need to be aware of two trends in interpretation: that used by some languages before Java and the interpretation used by Java.
+
+--- Slide 12 ---
+9.12
+Translation process
+Compilation and interpretation differ in that the first translates the whole source code before executing it, while the second translates and executes the source code a line at a time. Both methods, however, follow the same translation process shown in Figure 9.1.
+Figure 9.1  Source code translation process
+
+--- Slide 13 ---
+9.13
+9-3   PROGRAMMING PARADIGMS
+Today, computer languages are categorized according to the approach they use to solve a problem. A paradigm, therefore, is a way in which a computer language looks at the problem to be solved. We divide computer languages into four paradigms: procedural, object-oriented, functional and declarative. Figure 9.2 summarizes these.
+
+--- Slide 14 ---
+9.14
+Figure 9.2  Categories of programming languages
+
+--- Slide 15 ---
+9.15
+The procedural paradigm
+In the procedural paradigm (or imperative paradigm) we can think of a program as an active agent that manipulates passive objects. We encounter many passive objects in our daily life: a stone, a book, a lamp, and so on. A passive object cannot initiate an action by itself, but it can receive actions from active agents.
+	A program in a procedural paradigm is an active agent that uses passive objects that we refer to as data or data items. To manipulate a piece of data, the active agent (program) issues an action, referred to as a procedure. For example, think of a program that prints the contents of a file. The file is a passive object. To print the file, the program uses a procedure, which we call print.
+
+--- Slide 16 ---
+9.16
+Figure 9.3  The concept of the procedural paradigm
+
+--- Slide 17 ---
+9.17
+A program in this paradigm is made up of three parts: a part for object creation, a set of procedure calls and a set of code for each procedure. Some procedures have already been defined in the language itself. By combining this code, the programmer can create new procedures.
+Figure 9.4  The components of a procedural program
+
+--- Slide 18 ---
+9.18
+Some procedural languages
+ FORTRAN (FORmula TRANslation)
+ COBOL (COmmon Business-Oriented Language)
+ Pascal
+ C
+ Ada
+
+--- Slide 19 ---
+9.19
+The object-oriented paradigm
+The object-oriented paradigm deals with active objects instead of passive objects. We encounter many active objects in our daily life: a vehicle, an automatic door, a dishwasher and so on. The action to be performed on these objects are included in the object: the objects need only to receive the appropriate stimulus from outside to perform one of the actions.
+	A file in an object-oriented paradigm can be packed with all the procedures—called methods in the object-oriented paradigm—to be performed by the file: printing, copying, deleting and so on. The program in this paradigm just sends the corresponding request to the object.
+
+--- Slide 20 ---
+9.20
+Figure 9.5  The concept of an object-oriented paradigm
+
+--- Slide 21 ---
+9.21
+Classes
+As Figure 9.5 shows, objects of the same type (files, for example) need a set of methods that show how an object of this type reacts to stimuli from outside the object’s “territories”. To create these methods, a unit called a class is used (see Appendix F).
+Figure 9.6  The concept of an object-oriented paradigm
+
+--- Slide 22 ---
+9.22
+Methods
+In general, the format of methods are very similar to the functions used in some procedural languages. Each method has its header, its local variables and its statement. This means that most of the features we discussed for procedural languages are also applied to methods written for an object-oriented program. In other words, we can claim that object-oriented languages are actually an extension of procedural languages with some new ideas and some new features. The C++ language, for example, is an object-oriented extension of the C language. 
+
+--- Slide 23 ---
+9.23
+Inheritance
+In the object-oriented paradigm, as in nature, an object can inherit from another object. This concept is called inheritance. When a general class is defined, we can define a more specific class that inherits some of the characteristics of the general class, but also has some new characteristics. For example, when an object of the type GeometricalShapes is defined, we can define a class called Rectangles. Rectangles are geometrical shapes with additional characteristics.
+
+--- Slide 24 ---
+9.24
+Polymorphism
+Polymorphism means “many forms”. Polymorphism in the object-oriented paradigm means that we can define several operations with the same name that can do different things in related classes. For example, assume that we define two classes, Rectangles and Circles, both inherited from the class GeometricalShapes. We define two operations both named area, one in Rectangles and one in Circles, that calculate the area of a rectangle or a circle. The two operations have the same name
+
+--- Slide 25 ---
+9.25
+Some object-oriented languages
+ C++
+ Java
+
+--- Slide 26 ---
+9.26
+The functional paradigm
+In the functional paradigm a program is considered a mathematical function. In this context, a function is a black box that maps a list of inputs to a list of outputs.
+Figure 9.7  A function in a functional language
+
+--- Slide 27 ---
+9.27
+For example, we can define a primitive function called first that extracts the first element of a list. It may also have a function called rest that extracts all the elements except the first. A program can define a function that extracts the third element of a list by combining these two functions as shown in Figure 9.8.
+Figure 9.8  Extracting the third element of a list
+
+--- Slide 28 ---
+9.28
+Some functional languages
+ LISP (LISt Programming)
+ Scheme
+
+--- Slide 29 ---
+9.29
+The declarative paradigm
+A declarative paradigm uses the principle of logical reasoning to answer queries. It is based on formal logic defined by Greek mathematicians and later developed into
+first-order predicate calculus. 
+	Logical reasoning is based on deduction. Some statements (facts) are given that are assu</pre>
+</body></html>

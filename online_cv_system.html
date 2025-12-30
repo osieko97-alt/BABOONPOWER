@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Materials CV System</title>
+    <link rel="stylesheet" href="cv_styles.css">
+</head>
+<body>
+    <header>
+        <h1>📊 Educational Materials CV System</h1>
+        <p>Comprehensive spreadsheet view of all educational materials organized by subject and class level</p>
+    </header>
+
+    <div class="controls">
+        <button onclick="filterByClass()">Filter by Class</button>
+        <button onclick="filterBySubject()">Filter by Subject</button>
+        <button onclick="showAll()">Show All</button>
+        <input type="text" id="searchBox" placeholder="Search materials..." onkeyup="searchMaterials()">
+    </div>
+
+    <div class="cv-container">
+        <table id="cvTable">
+            <thead>
+                <tr>
+                    <th class="subject-header">Subject</th>
+                    <th class="class-header">PP1</th>
+                    <th class="class-header">PP2</th>
+                    <th class="class-header">Grade 1</th>
+                    <th class="class-header">Grade 2</th>
+                    <th class="class-header">Grade 3</th>
+                    <th class="class-header">Grade 4</th>
+                    <th class="class-header">Grade 5</th>
+                    <th class="class-header">Grade 6</th>
+                    <th class="class-header">Grade 7</th>
+                    <th class="class-header">Grade 8</th>
+                    <th class="class-header">Form 1</th>
+                    <th class="class-header">Form 2</th>
+                    <th class="class-header">Form 3</th>
+                    <th class="class-header">Form 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- English Row -->
+                <tr class="subject-row" data-subject="english">
+                    <td class="subject-cell">📚 English & Language Activities</td>
+                    <td class="class-cell" data-class="PP1">
+                        <div class="material-item" data-file="GRADE-PP1-SCHEMES-OF-WORK-LANGUAGE-ACTIVITIES-TERM-1-2019_copy.html">Language Activities Schemes</div>
+                    </td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="GRADE-1-ENGLISH-LANGUAGE-ACTIVITIES-Teacher.co_.ke__copy.html">English Language Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2">
+                        <div class="material-item" data-file="GRADE-2-ENGLISH-ACTIVITIES-Teacher.co_.ke__copy.pdf">English Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-ENGLISH-2024-TEACHER.CO_.KE_-7_copy.html">English 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1">
+                        <div class="material-item" data-file="FORM-1-ENGLISH-NOTES-1_copy.pdf">English Notes Form 1</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Mathematics Row -->
+                <tr class="subject-row" data-subject="mathematics">
+                    <td class="subject-cell">🔢 Mathematics</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="GRADE-1-MATHEMATICAL-ACTIVITIES-Teacher.co_.ke__copy.pdf">Mathematical Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2">
+                        <div class="material-item" data-file="GRADE-2-MATHEMATICAL-ACTIVITIES-Teacher.co_.ke__copy.pdf">Mathematical Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-MATHS-2024-TEACHER.CO_.KE_-23_copy.pdf">Mathematics 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- CRE Row -->
+                <tr class="subject-row" data-subject="cre">
+                    <td class="subject-cell">✝️ CRE & Religious Education</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2">
+                        <div class="material-item" data-file="GRADE-PP2-SCHEMES-OF-WORK-CRE-TERM-1-2019_copy.html">CRE Schemes</div>
+                        <div class="material-item" data-file="cre-activities-pp2-end-term-3-exam-2018_copy.html">CRE Activities Exam</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="Grade-1-CRE-Notes-Complete-Teacher.co_.ke__copy.pdf">CRE Notes Complete</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2"></td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-CRE-NOTES-TERM-12024-TEACHER.CO_.KE__copy.pdf">CRE Notes Term 1 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1">
+                        <div class="material-item" data-file="Form-1-IRE-Notes-Teacher.co_.ke__copy.pdf">IRE Notes Form 1</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Kiswahili Row -->
+                <tr class="subject-row" data-subject="kiswahili">
+                    <td class="subject-cell">🗣️ Kiswahili</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="GRADE-1-KISWAHILI-ACTIVITIES-Teacher.co_.ke__copy.pdf">Kiswahili Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2">
+                        <div class="material-item" data-file="GRADE-2-KISWAHILI-ACTIVITIES-Teacher.co_.ke__copy.pdf">Kiswahili Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-KISWAHILI-2024-TEACHER.CO_.KE_-7_copy.pdf">Kiswahili 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Environmental Activities Row -->
+                <tr class="subject-row" data-subject="environmental">
+                    <td class="subject-cell">🌍 Environmental Activities</td>
+                    <td class="class-cell" data-class="PP1">
+                        <div class="material-item" data-file="GRADE-PP1-SCHEMES-OF-WORK-ENVIRONMENT-TERM-1-2019_copy.pdf">Environment Activities Schemes</div>
+                    </td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="GRADE-1-ENVIRONMENTAL-ACTIVITIES-Teacher.co_.ke__copy.pdf">Environmental Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2">
+                        <div class="material-item" data-file="GRADE-2-ENVIRONMENTAL-ACTIVITIES-Teacher.co_.ke__copy.pdf">Environmental Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8"></td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Hygiene and Nutrition Row -->
+                <tr class="subject-row" data-subject="hygiene">
+                    <td class="subject-cell">🍎 Hygiene and Nutrition</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1">
+                        <div class="material-item" data-file="GRADE-1-HYGIENE-AND-NUTRITION-ACTIVITIES-Teacher.co_.ke__copy.pdf">Hygiene and Nutrition Activities</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 2">
+                        <div class="material-item" data-file="GRADE-2-HYGIENE-AND-NUTRITION-Teacher.co_.ke__copy.pdf">Hygiene and Nutrition</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8"></td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Creative Activities Row -->
+                <tr class="subject-row" data-subject="creative">
+                    <td class="subject-cell">🎨 Creative Activities</td>
+                    <td class="class-cell" data-class="PP1">
+                        <div class="material-item" data-file="GRADE-PP1-SCHEMES-OF-WORK-CREATIVE-ACTIVITIES-TERM-1-2019_copy.pdf">Creative Activities Schemes</div>
+                    </td>
+                    <td class="class-cell" data-class="PP2">
+                        <div class="material-item" data-file="GRADE-PP2-SCHEMES-OF-WORK-CREATIVE-ACTIVITIES-TERM-1-2019_copy.pdf">Creative Activities Schemes</div>
+                    </td>
+                    <td class="class-cell" data-class="Grade 1"></td>
+                    <td class="class-cell" data-class="Grade 2"></td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-CREATIVE-ARTS-AND-SPORTS-NOTES-STRAND-1-NOTES-FOUNDATIONS-OF-CREATIVE-ARTS-AND-SPORTS2024-TEACHER.CO_.KE__copy.pdf">Creative Arts Strand 1</div>
+                        <div class="material-item" data-file="G8-CREATIVE-ARTS-AND-SPORTS-NOTES-STRAND-2-NOTES-CREATING-AND-PERFORMING-IN-CREATIVE-ARTS-AND-SPORTS2024-TEACHER.CO_.KE__copy.pdf">Creative Arts Strand 2</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Science Row -->
+                <tr class="subject-row" data-subject="science">
+                    <td class="subject-cell">🔬 Science Subjects</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1"></td>
+                    <td class="class-cell" data-class="Grade 2"></td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-INTEGRATED-SCIENCE-NOTES-TERM-12024-TEACHER.CO_.KE__copy.pdf">Integrated Science 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1">
+                        <div class="material-item" data-file="CHEMISTRY-FORM-1-REVISION-BOOKLET_copy.pdf">Chemistry Revision Form 1</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+
+                <!-- Technology Row -->
+                <tr class="subject-row" data-subject="technology">
+                    <td class="subject-cell">💻 Technology & Computer Studies</td>
+                    <td class="class-cell" data-class="PP1"></td>
+                    <td class="class-cell" data-class="PP2"></td>
+                    <td class="class-cell" data-class="Grade 1"></td>
+                    <td class="class-cell" data-class="Grade 2"></td>
+                    <td class="class-cell" data-class="Grade 3"></td>
+                    <td class="class-cell" data-class="Grade 4"></td>
+                    <td class="class-cell" data-class="Grade 5"></td>
+                    <td class="class-cell" data-class="Grade 6"></td>
+                    <td class="class-cell" data-class="Grade 7"></td>
+                    <td class="class-cell" data-class="Grade 8">
+                        <div class="material-item" data-file="G8-COMPUTER-STUDIES-NOTES-TERM-12024-TEACHER.CO_.KE__copy.pdf">Computer Studies 2024</div>
+                        <div class="material-item" data-file="G8-PRE-TECHNICAL-STUDIES-NOTES-TERM-12024-TEACHER.CO_.KE__copy.pdf">Pre-Technical Studies 2024</div>
+                    </td>
+                    <td class="class-cell" data-class="Form 1"></td>
+                    <td class="class-cell" data-class="Form 2"></td>
+                    <td class="class-cell" data-class="Form 3"></td>
+                    <td class="class-cell" data-class="Form 4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for file interactions -->
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="cv_script.js"></script>
+</body>
+</html>

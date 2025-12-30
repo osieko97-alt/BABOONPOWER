@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Educational AI Dataset Portal</title>
+    <link rel="stylesheet" href="portal_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kenyan Educational AI Dataset Portal</h1>
+            <p>Comprehensive educational resources for scaling AI models in Kenya</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="showSection('subjects')">Subjects</a></li>
+                <li><a href="#" onclick="showSection('levels')">Education Levels</a></li>
+                <li><a href="#" onclick="showSection('search')">Search</a></li>
+                <li><a href="#" onclick="showSection('upload')">Upload</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="dashboard" class="section active">
+                <h2>Dashboard</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Total Files</h3>
+                        <p id="total-files">200</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Subjects</h3>
+                        <p id="total-subjects">9</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Education Levels</h3>
+                        <p id="education-levels">2</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <button onclick="showSection('upload')">Upload New File</button>
+                    <button onclick="showSection('search')">Search Dataset</button>
+                </div>
+            </section>
+
+            <section id="subjects" class="section">
+                <h2>Subjects</h2>
+                <div class="subject-grid" id="subjects-grid">
+                    <!-- Subjects will be loaded dynamically -->
+                </div>
+            </section>
+
+            <section id="levels" class="section">
+                <h2>Education Levels</h2>
+                <div class="levels-container">
+                    <div class="level-card">
+                        <h3>Primary Education</h3>
+                        <p>Grades 1-8</p>
+                        <p>Files: <span id="primary-count">80</span></p>
+                    </div>
+                    <div class="level-card">
+                        <h3>Secondary Education</h3>
+                        <p>Forms 1-4</p>
+                        <p>Files: <span id="secondary-count">120</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="search" class="section">
+                <h2>Search Dataset</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search by subject, level, or topic...">
+                    <button onclick="searchDataset()">Search</button>
+                </div>
+                <div id="search-results" class="search-results">
+                    <!-- Search results will appear here -->
+                </div>
+            </section>
+
+            <section id="upload" class="section">
+                <h2>Upload New File</h2>
+                <form id="upload-form" class="upload-form">
+                    <div class="form-group">
+                        <label for="file-subject">Subject:</label>
+                        <select id="file-subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Kiswahili">Kiswahili</option>
+                            <option value="English">English</option>
+                            <option value="Science">Science</option>
+                            <option value="Social Studies">Social Studies</option>
+                            <option value="IRE">IRE</option>
+                            <option value="Performing Arts">Performing Arts</option>
+                            <option value="Kenyan Sign Language">Kenyan Sign Language</option>
+                            <option value="Agriculture">Agriculture</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education-level">Education Level:</label>
+                        <select id="education-level" required>
+                            <option value="">Select Level</option>
+                            <option value="Primary">Primary</option>
+                            <option value="Secondary">Secondary</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file-topic">Topic:</label>
+                        <input type="text" id="file-topic" placeholder="Enter topic..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file-upload">Choose File:</label>
+                        <input type="file" id="file-upload" accept=".pdf,.docx,.pptx" required>
+                    </div>
+
+                    <button type="submit">Upload File</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Kenyan Educational AI Dataset Portal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="portal_script.js"></script>
+</body>
+</html>

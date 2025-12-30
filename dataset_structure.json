@@ -1,0 +1,115 @@
+{
+  "dataset_name": "Kenyan Educational AI Dataset",
+  "description": "Comprehensive dataset for scaling educational AI models in Kenya",
+  "version": "1.0",
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx", "pptx"],
+      "topics": [
+        "Algebra",
+        "Geometry",
+        "Trigonometry",
+        "Calculus",
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Kiswahili",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "Grammar",
+        "Composition",
+        "Literature",
+        "Oral Literature"
+      ]
+    },
+    {
+      "name": "English",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "Grammar",
+        "Composition",
+        "Literature",
+        "Oral Literature"
+      ]
+    },
+    {
+      "name": "Science",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx", "pptx"],
+      "topics": [
+        "Biology",
+        "Chemistry",
+        "Physics",
+        "Home Science"
+      ]
+    },
+    {
+      "name": "Social Studies",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "History",
+        "Geography",
+        "Civics"
+      ]
+    },
+    {
+      "name": "IRE",
+      "levels": ["Secondary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "Islamic Studies",
+        "Quranic Studies"
+      ]
+    },
+    {
+      "name": "Performing Arts",
+      "levels": ["Primary", "Secondary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "Music",
+        "Drama",
+        "Dance"
+      ]
+    },
+    {
+      "name": "Kenyan Sign Language",
+      "levels": ["Primary"],
+      "file_types": ["pdf", "docx"],
+      "topics": [
+        "Basic Sign Language",
+        "Advanced Sign Language"
+      ]
+    },
+    {
+      "name": "Agriculture",
+      "levels": ["Secondary"],
+      "file_types": ["pdf", "docx", "pptx"],
+      "topics": [
+        "Crop Production",
+        "Animal Husbandry",
+        "Soil Science"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_files": 200,
+    "file_formats": {
+      "pdf": 150,
+      "docx": 30,
+      "pptx": 20
+    },
+    "education_levels": {
+      "Primary": 80,
+      "Secondary": 120
+    },
+    "last_updated": "2025-12-04",
+    "country": "Kenya",
+    "language": "English, Kiswahili"
+  }
+}
